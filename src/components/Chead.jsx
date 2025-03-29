@@ -13,7 +13,7 @@ const Chead = () => {
       </p>
 
         {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <h2 className="text-3xl md:text-4xl  font-bold leading-tight mb-4 bg-gradient-to-r from-gray-400 via-gray-200 to-gray-400 bg-clip-text text-transparent mb-4">
           We’re Here to Help – Reach Out to Us!
         </h2>
 

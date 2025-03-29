@@ -5,7 +5,7 @@ const AboutSection = () => (
   <>
     <section className="text-center bg-cover ">
       <div className="flex flex-col items-center justify-center">
-        <h2 className="text-4xl font-bold text-gray-200 mb-6">About Us</h2>
+        <h2 className="text-4xl  font-bold leading-tight mb-4 bg-gradient-to-r from-gray-400 via-gray-200 to-gray-400 bg-clip-text text-transparent">About Us</h2>
         <p className="text-gray-400 w-full md:w-[40%] text-lg leading-relaxed mb-6">
           Elentis is revolutionizing skill development by creating a peer-to-peer learning and career empowerment platform.
           Whether you want to learn, teach, or monetize your expertise, Elentis provides a seamless ecosystem powered by AI-driven learning,
