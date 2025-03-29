@@ -1,0 +1,21 @@
+.semicircle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+  }
+  
+  /* Semicircle styling */
+  .semicircle {
+    width: 100%; /* Adjust size as needed */
+    height: 300px; /* Half the width for a semicircle */
+    border-radius: 300px ; /* Top-left, top-right, bottom-left, bottom-right */
+    background: radial-gradient(
+      circle at 50% 100%, /* Gradient origin at the bottom center */
+      rgba(148, 0, 211, 0.8), /* Purple color with some transparency */
+      rgba(0, 0, 0, 0) 70% /* Fades to transparent */
+    );
+    box-shadow: 0 0 20px 5px rgba(148, 0, 211, 0.8); /* Glow effect */
+  }
+
+ 
