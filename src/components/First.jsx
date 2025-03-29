@@ -37,7 +37,7 @@ const First = () => {
   };
 
   return (
-    <section className="text-white py-16 px-4 md:px-12" ref={ref}>
+    <section className="text-white py-5 px-4 md:px-12" ref={ref}>
       {/* Header */}
       <motion.div
         className="text-center mb-12"

@@ -49,22 +49,26 @@ const Third = () => {
       </motion.div>
 
       {/* Image Section - Preserving original sizing classes */}
-      <div className="flex justify-center items-center gap-0 mt-12">
-        {[t1, t2, t3].map((img, index) => (
-          <motion.img
-            key={index}
-            src={img}
-            alt={index === 0 ? "UX Course" : index === 1 ? "Live Class" : "Wallet"}
-            initial={imageAnimations[index].variant}
-            whileInView="visible"
-            whileHover={imageAnimations[index].hover}
-            viewport={{ once: true, margin: "-50px" }}
-            variants={imageVariants}
-            transition={{ type: "spring", stiffness: 100 }}
-            className={`rounded-lg shadow-lg object-cover w-1/3 md:w-auto h-full ${index === 1 ? "mx-2" : ""}`}
-          />
-        ))}
-      </div>
+      <div className="flex justify-center items-center gap-0 mt-12 flex-wrap sm:flex-nowrap">
+  {[t1, t2, t3].map((img, index) => (
+    <motion.img
+      key={index}
+      src={img}
+      alt={index === 0 ? "UX Course" : index === 1 ? "Live Class" : "Wallet"}
+      initial={imageAnimations[index].variant}
+      whileInView="visible"
+      whileHover={imageAnimations[index].hover}
+      viewport={{ once: true, margin: "-50px" }}
+      variants={imageVariants}
+      transition={{ type: "spring", stiffness: 100 }}
+      className={`rounded-lg shadow-lg object-cover w-1/3 max-w-xs h-auto ${
+        index === 1 ? "mx-2" : ""
+      }`}
+    />
+  ))}
+</div>
+
+
     </div>
   );
 };

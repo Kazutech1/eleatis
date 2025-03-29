@@ -9,8 +9,8 @@ const Aboutpage = () => {
   return (
     <div className="min-h-screen items-center bg-[#050506] text-white">
         <Navbar />
-        <div className='flex justify-center mt-20'>
-        <p className="text-xs bg-[#18181b]  inline-block px-3 py-1 w-auto rounded-full mb-4">
+        <div className='flex justify-center mt-10'>
+        <p className="text-xs bg-[#18181b] mt-10 inline-block px-3 py-1 w-auto rounded-full mb-4">
         <span className="text-[#a78bfa]">✦</span> Get in touch with us
       </p>
         </div>

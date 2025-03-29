@@ -7,7 +7,7 @@ const HeroSection = () => (
     initial={{ opacity: 0, scale: 0.95 }}
     animate={{ opacity: 1, scale: 1 }}
     transition={{ duration: 0.8, ease: "easeOut" }}
-    className="container mx-auto px-4 py-16 md:py-24 flex flex-col items-center text-center relative overflow-hidden"
+    className="container mx-auto px-4 py-1 mt-13 md:py-24 flex flex-col items-center text-center relative overflow-hidden"
   >
     {/* Glowing Lines */}
     <div className="absolute inset-0 overflow-hidden z-0">
@@ -31,7 +31,7 @@ const HeroSection = () => (
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="max-w-3xl mx-auto mb-8 relative z-10"
     >
-      <p className="text-xs bg-[#18181b] inline-block px-3 py-1 rounded-full mb-4">
+      <p className="text-xs bg-[#18181b] inline-block px-3 py-1 rounded-full mt-10">
         <span className="text-[#a78bfa]">✦</span> Innovative Web3 Technology for Learning
       </p>
       <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 bg-gradient-to-r from-gray-400 via-gray-200 to-gray-400 bg-clip-text text-transparent">
