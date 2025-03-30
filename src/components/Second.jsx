@@ -45,7 +45,7 @@ const Second = () => {
         animate={isInView ? "visible" : "hidden"}
       >
         <motion.h2
-          className="text-3xl md:text-4xl font-semibold"
+          className="text-3xl md:text-4xl font-semibold leading-tight mb-4 bg-gradient-to-r from-gray-400 via-gray-200 to-gray-400 bg-clip-text text-transparent"
           variants={headerItemVariants}
         >
           One on one <span className="text-gray-300">Mentorship</span>

@@ -39,7 +39,7 @@ const Third = () => {
         viewport={{ once: true, margin: "-50px" }}
         className="max-w-4xl mx-auto text-center"
       >
-        <h2 className="text-3xl md:text-4xl font-bold">
+        <h2 className="text-2xl md:text-4xl font-semibold leading-tight mb-4 bg-gradient-to-r from-gray-400 via-gray-200 to-gray-400 bg-clip-text text-transparent">
           Learn, teach, or <span className="text-gray-300">monetize your expertise</span>
         </h2>
         <p className="mt-4 text-gray-400 text-lg">

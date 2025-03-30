@@ -70,10 +70,10 @@ const First = () => {
         animate={isInView ? "visible" : "hidden"}
       >
         <motion.h3
-          className="text-2xl md:text-3xl font-semibold"
+          className="text-2xl md:text-3xl font-semibold  leading-tight mb-4 bg-gradient-to-r from-gray-400 via-gray-200 to-gray-400 bg-clip-text text-transparent"
           variants={headerItemVariants}
         >
-          Skill <span className="text-gray-400">Swap</span>
+          Skill Swap
         </motion.h3>
         <motion.p
           className="text-gray-400 mt-3"

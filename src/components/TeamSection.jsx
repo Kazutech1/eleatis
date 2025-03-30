@@ -32,7 +32,7 @@ const TeamSection = ({ teamMembers }) => {
   };
 
   return (
-    <section className="relative bg-black text-white  px-4 overflow-hidden">
+    <section className="relative bg-black text-white py-5  px-4 overflow-hidden">
       {/* Glowing Background */}
       <motion.div
         className="absolute inset-0 pointer-events-none"
@@ -58,7 +58,7 @@ const TeamSection = ({ teamMembers }) => {
           Who are we?
         </motion.button>
         <motion.h2
-          className="text-3xl font-bold"
+          className="text-3xl font-bold leading-tight mb-4 bg-gradient-to-r from-gray-400 via-gray-200 to-gray-400 bg-clip-text text-transparent"
           variants={headerItemVariants}
         >
           Meet The Team

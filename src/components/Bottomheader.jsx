@@ -73,7 +73,7 @@ const Bottomheader = () => {
         />
 
         {/* Main Content */}
-        <div className="relative z-10 flex flex-col md:flex-row items-center max-w-6xl w-full gap-8">
+        <div className="relative z-10 flex flex-col md:flex-row  items-center max-w-6xl w-full  gap-8">
           {/* Left Side (Text & QR) */}
           <motion.div
             className="flex-1"
@@ -90,14 +90,17 @@ const Bottomheader = () => {
             }}
           >
             {/* Small Badge */}
+            <div className='flex justify-center'>
             <motion.p
-              className="text-xs bg-[#18181b] inline-block px-3 py-1 rounded-full mb-4"
+              className="text-xs inline-block bg-[#18181b] text-center  px-3 py-2 rounded-full mb-4"
               variants={textVariants}
             >
               <span className="text-[#a78bfa]">✦</span> Start learning{' '}
               <span className="text-[#a78bfa]">with Elentis</span>
             </motion.p>
 
+            </div>
+           
             {/* Title */}
             <motion.h1
               className="font-[Space-Grotesk] text-3xl md:text-5xl font-bold text-center mb-4 bg-gradient-to-r from-gray-300 via-gray-50 to-gray-300 bg-clip-text text-transparent"

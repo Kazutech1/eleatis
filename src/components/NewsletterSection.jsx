@@ -27,7 +27,7 @@ const NewsletterSection = () => {
       >
         {/* Title */}
         <motion.h2
-          className="text-3xl md:text-4xl font-bold"
+          className="text-3xl md:text-4xl font-bold leading-tight mb-4 bg-gradient-to-r from-gray-400 via-gray-200 to-gray-400 bg-clip-text text-transparent"
           variants={textVariants}
         >
           Stay Ahead in Learning &amp; Web3 Innovation!

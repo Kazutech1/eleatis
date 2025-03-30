@@ -65,7 +65,7 @@ const WhyChooseSection = () => {
         initial={{ opacity: 0, y: -20 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ delay: 0.2, duration: 0.6 }}
-        className="text-3xl font-bold mb-12 text-white"
+        className="text-3xl  mb-12  font-bold leading-tight  bg-gradient-to-r from-gray-400 via-gray-200 to-gray-400 bg-clip-text text-transparent"
       >
         Why Choose Elentis?
       </motion.h2>

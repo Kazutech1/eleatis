@@ -23,7 +23,7 @@ const FeaturedSection = ({ features }) => {
     <section className="text-white py-16 px-6 md:px-16">
       {/* Section Title */}
       <motion.h2
-        className="text-4xl w-full text-center font-bold mb-12"
+        className="text-4xl w-full text-center font-bold mb-12  leading-tight  bg-gradient-to-r from-gray-400 via-gray-200 to-gray-400 bg-clip-text text-transparent"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }}
       >
