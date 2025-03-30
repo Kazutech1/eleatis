@@ -2,6 +2,10 @@ import React from 'react';
 import { motion, useInView } from 'framer-motion';
 import qr from '../assets/QR.png';
 import img1 from '../assets/img1.png';
+import b1 from '../assets/b1.png'
+import b2 from '../assets/b2.png'
+import download from '../assets/download.svg'
+import learn from '../assets/learn.svg'
 import { FiDownload } from 'react-icons/fi';
 
 const Bottomheader = () => {
@@ -26,12 +30,30 @@ const Bottomheader = () => {
     visible: { x: 0, opacity: 1, transition: { duration: 0.8, ease: 'easeOut' } },
   };
 
+  const [bgImage, setBgImage] = React.useState(window.innerWidth < 768 ? b2 : b1);
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      setBgImage(window.innerWidth < 768 ? b2 : b1);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div>
-      <section
-        className="relative flex items-center justify-center min-h-screen px-8 py-16 bg-[#050506] text-white overflow-hidden"
-        ref={ref}
-      >
+       <section
+      className="relative flex items-center justify-center min-h-screen px-8 py-16 text-white overflow-hidden bg-cover bg-center"
+      style={{
+        backgroundImage: `url(${bgImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+      ref={ref}
+    >
+
+
         {/* Top Swirl/Elliptical Glow Background */}
         <motion.div
           className="absolute inset-0 pointer-events-none"
@@ -78,7 +100,7 @@ const Bottomheader = () => {
 
             {/* Title */}
             <motion.h1
-              className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-gray-300 via-gray-50 to-gray-300 bg-clip-text text-transparent"
+              className="font-[Space-Grotesk] text-3xl md:text-5xl font-bold text-center mb-4 bg-gradient-to-r from-gray-300 via-gray-50 to-gray-300 bg-clip-text text-transparent"
               variants={textVariants}
             >
               Start Your Learning Journey <br className="hidden md:block" />
@@ -95,17 +117,37 @@ const Bottomheader = () => {
             </motion.p>
 
             {/* Buttons */}
-           <motion.button
-                  
-                  initial="initial"
-                  whileHover="hover"
-                  whileTap="tap"
-                  className="bg-white text-[#09090b] hover:bg-[#fafafa] text-xs rounded-full px-4 py-2 flex items-center gap-2"
-                >
-                  <FiDownload className="text-sm" />
-                  Download
-                </motion.button>
-
+            <div className="flex flex-row gap-4 py-6">
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          className=" text-[#09090b]  w-37 h-15  px-6 py-2 transition-all bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${download})`,
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            padding: "10px 40px", // Ensure text remains readable
+            color: "white", // Text color for contrast
+          }}
+        >
+          
+        </motion.button>
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          className=" text-[#09090b]  w-35  px-6 py-2 transition-all bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${learn})`,
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            padding: "10px 40px", // Ensure text remains readable
+            color: "white", // Text color for contrast
+          }}
+        >
+        </motion.button>
+      </div>
             {/* QR Code + Text */}
             <motion.div
               className="flex items-center gap-4"
@@ -130,7 +172,7 @@ const Bottomheader = () => {
             <img
               src={img1}
               alt="Mobile App Screenshot"
-              className="rounded-xl shadow-lg"
+              className="rounded-xl m-auto md:ml-15 shadow-lg"
             />
           </motion.div>
         </div>

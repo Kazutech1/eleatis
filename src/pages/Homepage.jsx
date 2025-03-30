@@ -12,6 +12,7 @@ import im from '../assets/img3.png'
 import m from '../assets/img4.png'
 import { FaExchangeAlt, FaChalkboardTeacher, FaBrain, FaUserCheck, FaShieldAlt, FaCertificate, FaBriefcase, FaUserTie } from 'react-icons/fa';
 import Bottomheader from '../components/Bottomheader'
+import DecorationBlob from '../components/Head'
 
 
 const features = [
@@ -49,8 +50,9 @@ const features = [
 
 const Homepage = () => {
   return (
-    <div className="min-h-screen bg-[#050506] text-white">
-        <Navbar />
+    <div className="min-h-screen bg-[#09090b] text-white">
+   
+         <Navbar />
         <HeroSection />
         <WhyChooseSection />
         <FeaturedSection features={features} />
@@ -58,7 +60,7 @@ const Homepage = () => {
         <TeamSection  teamMembers={teamMembers} />
         <Bottomheader />
         <NewsletterSection />
-        <Footer />
+        <Footer /> 
     </div>
   )
 }

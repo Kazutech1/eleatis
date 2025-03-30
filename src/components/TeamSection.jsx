@@ -32,7 +32,7 @@ const TeamSection = ({ teamMembers }) => {
   };
 
   return (
-    <section className="relative bg-black text-white py-16 px-4 overflow-hidden">
+    <section className="relative bg-black text-white  px-4 overflow-hidden">
       {/* Glowing Background */}
       <motion.div
         className="absolute inset-0 pointer-events-none"
@@ -79,32 +79,37 @@ const TeamSection = ({ teamMembers }) => {
         animate={isInView ? 'visible' : 'hidden'}
       >
         {teamMembers.map((member, index) => (
-          <motion.div
-            key={index}
-            className="p-6 rounded-xl shadow-lg w-full md:w-72  border-transparent"
-            variants={cardVariants} // Apply individual card animations
-            whileHover={{
-              scale: 1.05, // Scale up slightly on hover
-              boxShadow: '0 10px 20px rgba(167, 139, 250, 0.5)', // Add glow effect
-              borderColor: '#a78bfa', // Highlight border
-            }}
-            transition={{ duration: 0.3 }} // Smooth hover transition
-          >
-            <img
-              src={member.image}
-              alt={member.name}
-              className="w-full h-80 object-cover rounded-xl mb-4"
-            />
-            <h3 className="text-lg font-semibold">{member.name}</h3>
-            <motion.p
-              className="text-purple-400 font-medium"
-              whileHover={{ color: '#fff' }} // Change text color on hover
-              transition={{ duration: 0.3 }}
-            >
-              {member.role}
-            </motion.p>
-            <p className="text-gray-400 text-sm mt-2">{member.description}</p>
-          </motion.div>
+         <motion.div
+         key={index}
+         className="p-6 rounded-xl shadow-lg w-full md:w-72 border-transparent"
+         variants={cardVariants} // Apply individual card animations
+       
+         transition={{ duration: 0.3 }} // Smooth hover transition
+       >
+         {/* Image with Hover Effect */}
+         <motion.div 
+           className="w-full h-80 overflow-hidden rounded-xl mb-4"
+           whileHover={{ scale: 1.1 }} // Scale up image on hover
+           transition={{ duration: 0.3 }}
+         >
+           <img
+             src={member.image}
+             alt={member.name}
+             className="w-full h-full object-cover rounded-xl"
+           />
+         </motion.div>
+       
+         <h3 className="text-lg font-semibold">{member.name}</h3>
+         <motion.p
+           className="text-purple-400 font-medium"
+           whileHover={{ color: '#fff' }} // Change text color on hover
+           transition={{ duration: 0.3 }}
+         >
+           {member.role}
+         </motion.p>
+         <p className="text-gray-400 text-sm mt-2">{member.description}</p>
+       </motion.div>
+       
         ))}
       </motion.div>
     </section>

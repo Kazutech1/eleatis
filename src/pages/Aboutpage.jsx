@@ -7,9 +7,9 @@ import Footer from '../components/Footer'
 
 const Aboutpage = () => {
   return (
-    <div className="min-h-screen items-center bg-[#050506] text-white">
+    <div className="min-h-screen items-center pt-10 bg-[#050506] text-white">
         <Navbar />
-        <div className='flex justify-center mt-10'>
+        <div className='flex justify-center '>
         <p className="text-xs bg-[#18181b] mt-10 inline-block px-3 py-1 w-auto rounded-full mb-4">
         <span className="text-[#a78bfa]">✦</span> Get in touch with us
       </p>
@@ -18,7 +18,7 @@ const Aboutpage = () => {
         <AboutSection />
         <section className=" text-gray-100 py-16 px-4">
       <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-2xl md:text-3xl font-bold mb-6">The Story of Elentis</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-6 bg-gradient-to-r from-gray-400 via-gray-200 to-gray-400 bg-clip-text text-transparent">The Story of Elentis</h2>
         <p className="text-gray-300 leading-relaxed text-sm md:text-base">
           Elentis was born from a simple idea: learning should be accessible, rewarding, and lead to real opportunities.
           Victor Chigbu Uzoma, a data scientist and entrepreneur, saw how many people struggled to learn new skills,

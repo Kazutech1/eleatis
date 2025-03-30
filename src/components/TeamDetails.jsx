@@ -16,14 +16,6 @@ const teamData = [
     title: 'Visionary Leader | Innovator | Entrepreneur.',
   },
   {
-    name: 'John Segun Omibekun',
-    role: 'Social Media Manager',
-    description:
-      'John Segun Omibekun is the Social Media Manager at Elentis. He crafts engaging content and strategic campaigns that amplify Elentis mission of revolutionizing knowledge exchange, skill development, and career growth. With a passion for digital storytelling and data-driven engagement, John specializes in building vibrant online communities, increasing brand visibility, and driving meaningful conversations. His expertise in content strategy, analytics, and audience growth helps position Elentis as the go-to platform for peer-to-peer learning and skill monetization',
-    image: 'img3.png',
-    title: 'Social Media Strategist | Digital Storyteller | Community Builder.',
-  },
-  {
     name: 'Daniel Ngoka',
     role: 'Graphic Designer',
     description:
@@ -31,6 +23,15 @@ const teamData = [
     image: 'img4.png',
     title: 'Creative Strategist | Visual Storyteller | Brand Designer',
   },
+  {
+    name: 'John Segun Omibekun',
+    role: 'Social Media Manager',
+    description:
+      'John Segun Omibekun is the Social Media Manager at Elentis. He crafts engaging content and strategic campaigns that amplify Elentis mission of revolutionizing knowledge exchange, skill development, and career growth. With a passion for digital storytelling and data-driven engagement, John specializes in building vibrant online communities, increasing brand visibility, and driving meaningful conversations. His expertise in content strategy, analytics, and audience growth helps position Elentis as the go-to platform for peer-to-peer learning and skill monetization',
+    image: 'img3.png',
+    title: 'Social Media Strategist | Digital Storyteller | Community Builder.',
+  },
+
 ];
 
 // Map image filenames to imported images
@@ -85,7 +86,7 @@ const TeamPage = () => {
           Who are we?
         </motion.p>
         <motion.h2
-          className="text-2xl md:text-3xl font-bold"
+          className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-gray-400 via-gray-200 to-gray-400 bg-clip-text text-transparent"
           variants={headerItemVariants}
         >
           Meet The Team
@@ -142,7 +143,7 @@ const TeamPage = () => {
                   <FaLinkedinIn size={20} />
                 </motion.a>
               </div>
-              <p className="text-gray-300 text-sm md:text-base mt-4 leading-relaxed md:w-[80%]">
+              <p className="text-gray-300 font-[poppins] text-sm md:text-base mt-4 leading-relaxed md:w-[80%]">
                 {member.description}
               </p>
             </div>

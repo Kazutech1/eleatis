@@ -8,7 +8,7 @@ import Footer from '../components/Footer'
 
 const Contactpage = () => {
   return (
-    <div className="min-h-screen bg-[#050506] text-white">
+    <div className="min-h-screen  bg-[#09090b] text-white">
         <Navbar />
         <Chead />
         <ContactForm />

@@ -42,13 +42,13 @@ const FeaturedSection = ({ features }) => {
           {features.map((feature, index) => (
             <motion.div
               key={index}
-              className="flex flex-col items-start rounded-lg shadow-lg border border-gray-700 p-4"
+              className="flex flex-col items-start rounded-lg shadow-lg  p-4"
               variants={cardVariants} // Apply individual card animations
               whileHover={{ scale: 1.05, transition: { duration: 0.2 } }} // Hover effect
             >
               <div className="flex items-center gap-2 mb-4">
                 <div className="text-white">{feature.icon}</div>
-                <h3 className="text-xl font-semibold">{feature.title}</h3>
+                <h3 className="text-sm font-semibold">{feature.title}</h3>
               </div>
               <p className="text-gray-400 text-sm">{feature.description}</p>
             </motion.div>
