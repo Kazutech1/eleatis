@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiDownload, FiMenu, FiX } from "react-icons/fi";
 import logo from "../assets/logo.svg";
+import logo2 from "../assets/logo2.svg";
 import download from '../assets/get.svg'
 
 const Navbar = () => {
@@ -24,9 +25,15 @@ const Navbar = () => {
   return (
     <header className="fixed top-4 left-1/2 transform -translate-x-1/2 w-[90%] md:w-[80%] z-50 bg-transparent rounded-full shadow-lg  py-2 px-6 flex items-center justify-between">
       {/* Logo */}
-      <motion.div whileHover={{ scale: 1.05 }} className="flex items-center gap-2 z-50">
-        <img src={logo} alt="Logo" className="w-16 rounded-full" />
-      </motion.div>
+     {/* Logo - Different for Small and Large Screens */}
+<motion.div whileHover={{ scale: 1.05 }} className="flex items-center gap-2 z-50">
+  {/* Default Logo for Large Screens */}
+  <img src={logo} alt="Logo" className="hidden md:block w-30 rounded-full" />
+  
+  {/* Small Screen Logo */}
+  <img src={logo2} alt="Logo" className="block md:hidden w-8 " />
+</motion.div>
+
 
       {/* Desktop Navigation Links */}
       <nav className="hidden md:flex items-center gap-8">
