@@ -50,22 +50,17 @@ const Third = () => {
 
       {/* Image Section - Preserving original sizing classes */}
       {/* Image Section - Aligning left to right */}
-<div className="flex flex-row justify-center items-center gap-2 mt-12">
+      <div className="flex justify-center items-center gap-2 mt-12">
   {[t1, t2, t3].map((img, index) => (
-    <motion.img
+    <img
       key={index}
       src={img}
       alt={index === 0 ? "UX Course" : index === 1 ? "Live Class" : "Wallet"}
-      initial={imageAnimations[index].variant}
-      whileInView="visible"
-      whileHover={imageAnimations[index].hover}
-      viewport={{ once: true, margin: "-50px" }}
-      variants={imageVariants}
-      transition={{ type: "spring", stiffness: 100 }}
       className="rounded-lg shadow-lg object-cover w-1/3 max-w-xs h-auto"
     />
   ))}
 </div>
+
 
 
     </div>
