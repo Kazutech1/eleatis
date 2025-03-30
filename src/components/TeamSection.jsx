@@ -88,7 +88,7 @@ const TeamSection = ({ teamMembers }) => {
        >
          {/* Image with Hover Effect */}
          <motion.div 
-           className="w-full h-80 overflow-hidden rounded-xl mb-4"
+           className="w-full overflow-hidden rounded-xl mb-4"
            whileHover={{ scale: 1.1 }} // Scale up image on hover
            transition={{ duration: 0.3 }}
          >
