@@ -12,7 +12,7 @@ const Fourth = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true, margin: "-50px" }}
-        className="max-w-4xl mx-auto text-center md:text-left"
+        className="max-w-4xl mx-auto text-left"
       >
         <h2 className="text-2xl md:text-3xl font-bold leading-tight mb-4 bg-gradient-to-r from-gray-400 via-gray-200 to-gray-400 bg-clip-text text-transparent">
           Job Referrals &amp; Career Integration

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, useInView } from 'framer-motion';
-import { FaTwitter, FaLinkedinIn } from 'react-icons/fa';
+import { FaLinkedinIn } from 'react-icons/fa';
 import img from '../assets/img2.png';
 import im from '../assets/img3.png';
 import m from '../assets/img4.png';
@@ -120,19 +120,11 @@ const TeamPage = () => {
             />
             {/* Data on the right */}
             <div className="flex flex-col pt-10 mt-4 md:mt-0 md:ml-8 md:text-left">
+              
               <h3 className="text-xl md:text-2xl font-semibold">{member.name}</h3>
               <p className="text-purple-400 font-medium">{member.role}</p>
               <p className="font-medium">{member.title}</p>
-              <div className="flex gap-4 text-purple-400 mt-4 justify-center md:justify-start">
-                <motion.a
-                  href="#"
-                  className="hover:text-white transition-colors"
-                  whileHover={{ scale: 1.2 }} // Scale up slightly on hover
-                  whileTap={{ scale: 0.9 }} // Scale down slightly on tap
-                  transition={{ duration: 0.2 }}
-                >
-                  <FaTwitter size={20} />
-                </motion.a>
+              <div className="flex gap-4 text-purple-400 mt-4 justify-start">
                 <motion.a
                   href="#"
                   className="hover:text-white transition-colors"

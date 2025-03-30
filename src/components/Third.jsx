@@ -30,14 +30,14 @@ const Third = () => {
   ];
 
   return (
-    <div className="text-white bg-black py-16 px-6">
+    <div className="text-white py-6 px-6">
       {/* Title & Description */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true, margin: "-50px" }}
-        className="max-w-4xl mx-auto text-center"
+        className="max-w-4xl mx-auto "
       >
         <h2 className="text-2xl md:text-4xl font-semibold leading-tight mb-4 bg-gradient-to-r from-gray-400 via-gray-200 to-gray-400 bg-clip-text text-transparent">
           Learn, teach, or <span className="text-gray-300">monetize your expertise</span>
@@ -49,7 +49,8 @@ const Third = () => {
       </motion.div>
 
       {/* Image Section - Preserving original sizing classes */}
-      <div className="flex justify-center items-center gap-0 mt-12 flex-wrap sm:flex-nowrap">
+      {/* Image Section - Aligning left to right */}
+<div className="flex flex-row justify-center items-center gap-2 mt-12">
   {[t1, t2, t3].map((img, index) => (
     <motion.img
       key={index}
@@ -61,9 +62,7 @@ const Third = () => {
       viewport={{ once: true, margin: "-50px" }}
       variants={imageVariants}
       transition={{ type: "spring", stiffness: 100 }}
-      className={`rounded-lg shadow-lg object-cover w-1/3 max-w-xs h-auto ${
-        index === 1 ? "mx-2" : ""
-      }`}
+      className="rounded-lg shadow-lg object-cover w-1/3 max-w-xs h-auto"
     />
   ))}
 </div>

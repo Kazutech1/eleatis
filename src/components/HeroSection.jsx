@@ -20,7 +20,7 @@ const HeroSection = () => (
       className="max-w-3xl mx-auto px-5 mb-8 relative z-10"
     >
       <p className="text-xs bg-[#18181b] inline-block px-3 py-2 rounded-full my-10">
-        <span className="text-[#a78bfa]">✦</span> Innovative Web3 Technology for Learning
+        <span className="text-[#a78bfa]">✦</span> Welcome to the <span className="text-[#a78bfa]">Beta version</span>
       </p>
       <h1 className="font-[Space_Grotesk] text-[30px] md:text-5xl lg:text-6xl font-bold leading-tight mb-4 bg-gradient-to-r from-gray-400 via-gray-200 to-gray-400 bg-clip-text text-transparent">
         Empower your Future with Skills &amp; Web3-Powered Learning
