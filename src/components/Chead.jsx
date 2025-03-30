@@ -9,7 +9,7 @@ const Chead = () => {
     initial={{ opacity: 0, scale: 0.95 }}
     animate={{ opacity: 1, scale: 1 }}
     transition={{ duration: 0.8, ease: "easeOut" }}
-    className="container mx-auto pt-20 md:py-24  flex flex-col items-center text-center relative overflow-hidden bg-cover bg-center"
+    className="container mx-auto pt-20 md:py-24 pb-25  flex flex-col items-center text-center relative overflow-hidden bg-cover bg-center"
     style={{ backgroundImage: `url(${img00})` }}
   >
       {/* Gradient Blur at the Bottom */}
