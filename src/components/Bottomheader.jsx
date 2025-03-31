@@ -103,7 +103,7 @@ const Bottomheader = () => {
            
             {/* Title */}
             <motion.h1
-              className="font-[Space-Grotesk] text-3xl md:text-5xl font-bold text-center mb-4 bg-gradient-to-r from-gray-300 via-gray-50 to-gray-300 bg-clip-text text-transparent"
+              className="font-[Space-Grotesk] text-3xl md:text-5xl font-bold text-center md:text-start mb-4 bg-gradient-to-r from-gray-300 via-gray-50 to-gray-300 bg-clip-text text-transparent"
               variants={textVariants}
             >
               Start Your Learning Journey <br className="hidden md:block" />

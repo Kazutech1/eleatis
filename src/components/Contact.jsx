@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaLinkedin, FaTwitter, FaPaperPlane, FaFacebook, FaInstagram } from "react-icons/fa";
+import { FiMail } from "react-icons/fi";
 
 const ContactForm = () => {
   // Animation variants
@@ -31,7 +32,7 @@ const ContactForm = () => {
       whileInView="show"
       viewport={{ once: true, margin: "-50px" }}
       variants={container}
-      className="flex flex-col items-center justify-center min-h-screen text-white px-4 overflow-hidden"
+      className="flex flex-col items-center justify-center pt-6 text-white px-4 overflow-hidden"
     >
       {/* Social Media Icons */}
       <motion.div className="flex space-x-4 mb-8">
@@ -47,18 +48,24 @@ const ContactForm = () => {
             variants={socialIcon}
             custom={social.delay}
             href="#"
-            className="text-purple-400 hover:text-purple-600 transition duration-300"
+            className=" hover:text-purple-600 transition duration-300"
             whileHover={{ y: -5 }}
           >
             {social.icon}
           </motion.a>
         ))}
       </motion.div>
+      
+      <p className="flex items-center gap-2 text-white">
+  <FiMail className="text-xl" />
+  Officialelentis@gmail.com
+</p>
+
 
       {/* Form */}
       <motion.form 
         variants={container}
-        className="w-full max-w-md flex flex-col justify-center"
+        className="w-full max-w-md  mt-10 flex flex-col justify-center"
       >
         {/* Name and Email Inputs */}
         <motion.div 
