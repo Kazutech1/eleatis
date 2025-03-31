@@ -5,6 +5,7 @@ import { FiDownload, FiMenu, FiX } from "react-icons/fi";
 import logo from "../assets/logo.svg";
 import logo2 from "../assets/logo2.svg";
 import download from '../assets/get.svg'
+import nav from '../assets/nav.png'
 
 const Navbar = () => {
   const location = useLocation();
@@ -92,45 +93,48 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <AnimatePresence>
-        {isMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="fixed top-0 left-0 w-full h-screen bg-[#09090b] bg-opacity-95 backdrop-blur-lg z-40 flex flex-col items-center pt-24 px-6 overflow-y-auto"
-          >
-            {navItems.map((path, index) => {
-              const label = path === "/" ? "Home" : path.slice(1).charAt(0).toUpperCase() + path.slice(2);
-              return (
-                <motion.div key={index} className="w-full text-center py-4 border-b border-gray-800">
-                  <Link
-                    to={path}
-                    onClick={() => {
-                      setActiveLink(path);
-                      setIsMenuOpen(false);
-                    }}
-                    className="block text-lg text-white hover:text-purple-400"
-                  >
-                    {label}
-                  </Link>
-                </motion.div>
-              );
-            })}
-
-
-         <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="mt-8 bg-white text-[#09090b] text-sm rounded-full px-6 py-3 flex items-center gap-2"
+  {isMenuOpen && (
+    <motion.div
+      initial={{ opacity: 0, x: 100 }}      // Start off-screen to the right
+      animate={{ opacity: 1, x: 0 }}          // Slide in to original position
+      exit={{ opacity: 0, x: 100 }}           // Slide out to the right on exit
+      className="fixed mx-0 top-0 left-0 w-full h-screen bg-opacity-95 backdrop-blur-lg z-40 flex flex-col items-center pt-24 px-6 overflow-y-auto"
+      style={{
+        backgroundImage: `url(${nav})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      {navItems.map((path, index) => {
+        const label = path === "/" ? "Home" : path.slice(1).charAt(0).toUpperCase() + path.slice(2);
+        return (
+          <motion.div key={index} className="w-full text-center py-4 border-b border-gray-800">
+            <Link
+              to={path}
+              onClick={() => {
+                setActiveLink(path);
+                setIsMenuOpen(false);
+              }}
+              className="block text-lg text-white hover:text-purple-400"
             >
-              <FiDownload className="text-sm" />
-              Download
-            
-          
-        </motion.button>
+              {label}
+            </Link>
           </motion.div>
-        )}
-      </AnimatePresence>
+        );
+      })}
+      <motion.button
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="mt-8 bg-white text-[#09090b] text-sm rounded-full px-6 py-3 flex items-center gap-2"
+      >
+        <FiDownload className="text-sm" />
+        Download
+      </motion.button>
+    </motion.div>
+  )}
+</AnimatePresence>
+
+
     </header>
   );
 };

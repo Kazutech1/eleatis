@@ -5,7 +5,7 @@ import f2 from "../assets/f2.png";
 
 const Fourth = () => {
   return (
-    <section className="text-white py-16 px-4">
+    <section className="text-white py-6 px-4">
       {/* Text Section */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}

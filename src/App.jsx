@@ -8,7 +8,7 @@ import Contactpage from "./pages/Contactpage";
 function App() {
   return (
     <Router>
-      <div className="min-h-screen w-full ">
+      <div className=" ">
        
         <Routes>
         <Route path="/" element={<Homepage />} />

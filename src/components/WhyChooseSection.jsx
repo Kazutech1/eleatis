@@ -81,10 +81,10 @@ const WhyChooseSection = () => {
           <motion.div
             key={index}
             variants={itemVariants} // Apply individual item animations
-            className={`relative bg-cover bg-center h-80 md:h-110 p-6 rounded-xl border border-[#29292e] w-full md:flex-1 ${item.width}`}
+            className={`relative bg-cover bg-center h-120 md:h-110 p-6 rounded-xl border border-[#29292e] w-full md:flex-1 ${item.width}`}
             style={{ backgroundImage: `url(${item.img})` }}
           >
-            <div className="absolute inset-0 bg-black/40 rounded-xl" />
+            <div className="absolute inset-0 bg-black/30 rounded-xl" />
             <div className="relative z-10 flex flex-col h-full">
               <h3 className="text-xl font-semibold text-white">{item.title}</h3>
               <p className="text-[#a1a1aa] text-sm mt-2">{item.desc}</p>

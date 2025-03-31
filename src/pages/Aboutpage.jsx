@@ -7,7 +7,7 @@ import Footer from '../components/Footer'
 
 const Aboutpage = () => {
   return (
-    <div className="min-h-screen items-center pt-10 bg-[#050506] text-white">
+    <div className=" items-center pt-10 bg-[#050506] text-white">
         <Navbar />
         <div className='flex justify-center '>
         <p className="text-xs bg-[#18181b] mt-10 inline-block px-3 py-1 w-auto rounded-full mb-4">

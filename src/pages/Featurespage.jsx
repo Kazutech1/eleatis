@@ -25,7 +25,7 @@ const features = [
 
 const Featurespage = () => {
   return (
-    <div className="min-h-screen bg-[#050506] text-white">
+    <div className=" bg-[#050506] text-white">
         <Navbar />
         <First />
         <Second />
