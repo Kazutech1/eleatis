@@ -115,24 +115,7 @@ const ContactForm = () => {
         </motion.div>
       </motion.form>
 
-      {/* Contact Details */}
-      <motion.div 
-        variants={container}
-        className="mt-8 text-center text-gray-400"
-      >
-        <motion.p variants={item} className="mb-2">
-          <span className="mr-1"><i className="fas fa-envelope"></i></span>
-          contact@company.com
-        </motion.p>
-        <motion.p variants={item} className="mb-2">
-          <span className="mr-1"><i className="fas fa-phone"></i></span>
-          (123) 456 – 789
-        </motion.p>
-        <motion.p variants={item}>
-          <span className="mr-1"><i className="fas fa-map-marker-alt"></i></span>
-          794 Mcallister St San Francisco, 94102
-        </motion.p>
-      </motion.div>
+      
     </motion.div>
   );
 };
